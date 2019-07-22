@@ -124,21 +124,16 @@ section.attention{
   display: table;
   background-color: #fff;
 }
-
+.aboutme div{
+  padding: 0 0 0 5px;
+  display: table-cell;
+  vertical-align:top;
+}
 .aboutme img{
   display: table-cell;
   float: left;
   width:100%;
-  padding: 10px;
-}
-.aboutme div{
-  
-  padding: 20px;
-  display: table-cell;
-  vertical-align:top;
-}
-form{
-  display: table-cell;
+
 }
 /*Form page*/
 form{

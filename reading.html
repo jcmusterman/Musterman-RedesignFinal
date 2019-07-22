@@ -4,6 +4,27 @@
     <meta charset="UTF-8">
     <title>Mrs. Smith's Reading Class</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="wrapper">
@@ -17,10 +38,19 @@
           <li><a href="reading.html">Reading Class</a></li>
           <li><a href="creativewriting.html">Creative Writing Class</a></li>
           <li><a href="about.html">About Me</a></li>
-          <li><a href="form.html">Ask A Question</a></li>
           <li><a href="gallery/gallery.html" target="_blank">Photo Gallery</a></li>
         </ul>
       </nav>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn"><div></div><div></div><div></div></button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="reading.html">Reading Class</a>
+            <a href="creativewriting.html">Creative Writing Class</a>
+            <a href="about.html">About Me</a>
+            <a href="gallery/gallery.html" target="_blank">Photo Gallery</a>
+          </div>
+        </div>
     <section class="attention">
       <div class="upcoming">
         <h2>Upcoming Assignments</h2>

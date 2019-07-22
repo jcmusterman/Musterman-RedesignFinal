@@ -4,6 +4,36 @@
     <meta charset="UTF-8">
     <title>About Mrs. Smith</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    <script>
+    function validateForm() {
+      var x = document.forms["myForm"]["name"].value;
+      if (x == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="wrapper">
@@ -17,11 +47,19 @@
           <li><a href="reading.html">Reading Class</a></li>
           <li><a href="creativewriting.html">Creative Writing Class</a></li>
           <li><a href="about.html">About Me</a></li>
-          <li><a href="form.html">Ask A Question</a></li>
           <li><a href="gallery/gallery.html" target="_blank">Photo Gallery</a></li>
-
         </ul>
       </nav>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn"><div></div><div></div><div></div></button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="reading.html">Reading Class</a>
+            <a href="creativewriting.html">Creative Writing Class</a>
+            <a href="about.html">About Me</a>
+            <a href="gallery/gallery.html" target="_blank">Photo Gallery</a>
+          </div>
+        </div>
 <section class="aboutme">
   <img src="img/mrssmith.jpg" alt="Picture of Mrs. Smith">
 <div>
@@ -30,6 +68,29 @@
     <p>Thanks for stopping by!</p>
   </div>
 
+<div>
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  <section>
+    <h2>Questions or Comments?</h2>
+    <p class="note">*required</p>
+    <label for="name">Name<span>*:</span></label><br>
+    <input type="text" name="name">
+  </section>
+  <section>
+    <label for="question">Question/Comment:</label><br>
+    <textarea id="question" name="question" placeholder="Questions/Comments"></textarea>
+  </section>
+  <section>
+    <label for="email">Email Address:</label><br>
+    <input type="text" name="email">
+  </section>
+  <section>
+    <label for="phone">Phone Number:</label><br>
+    <input type="text" name="phone">
+  <input type="submit" value="Submit">
+</form>
+
+</div>
 </section>
 <footer>
   <p><strong>Ridgefield Elementary School</strong></p>
