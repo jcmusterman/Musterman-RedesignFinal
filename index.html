@@ -4,6 +4,27 @@
     <meta charset="UTF-8">
     <title>Mrs. Smith's Classroom - Home</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="wrapper">
@@ -11,7 +32,7 @@
       <img src="img/griffin.png" alt="Griffin logo">
       <h1>Welcome to Mrs. Smith's Classroom!</h1>
     </header>
-      <nav class="menu">
+        <nav class="menu">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="reading.html">Reading Class</a></li>
@@ -21,6 +42,17 @@
           <li><a href="gallery/gallery.html" target="_blank">Photo Gallery</a></li>
         </ul>
       </nav>
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn"><div></div><div></div><div></div></button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="index.html">Home</a>
+          <a href="reading.html">Reading Class</a>
+          <a href="creativewriting.html">Creative Writing Class</a>
+          <a href="about.html">About Me</a>
+          <a href="form.html">Ask A Question</a>
+          <a href="gallery/gallery.html" target="_blank">Photo Gallery</a>
+        </div>
+      </div>
 <section class="homemain">
   <video width="320" height="240" controls>
 

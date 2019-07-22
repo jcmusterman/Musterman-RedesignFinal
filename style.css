@@ -5,8 +5,8 @@ body{
 }
 #wrapper{
   min-width: 760px; max-width: 1100px; margin:auto;
-
 }
+/*Header and nav bar */
 header{
   width:100%;
   margin: 10px 0 0;
@@ -34,25 +34,31 @@ nav.menu li{
   border-top: 1px solid #fff;
   border-right:1px solid #fff;
   border-bottom:1px solid #fff;
-  padding: 10px 10px;
 }
 nav a{
   color:#fff;
   text-decoration: none;
+  display: inline-block;
+  padding:10px 10px;
 }
+nav a:hover{
+  background-color: #c9655d;
+}
+
+/*Homepage main body*/
 section.homemain{
   margin:0;
   display: table;
   background-color: #fff;
-}
-video{
+  }
+  video{
   padding:50px 0 0 10px;
 }
 section img{
-  display: table-cell;
+display: table-cell;
   width:400px;
 }
-div.announcements{
+  div.announcements{
   display: table-cell;
   padding:0 10px 0 20px;
   vertical-align: middle;
@@ -60,6 +66,7 @@ div.announcements{
 section.homemain h2{
   text-align: center;
 }
+/*Main body for reading and creative writing classes*/
 section.attention{
   margin:0;
   display: table;
@@ -70,6 +77,7 @@ section.attention{
 }
 .attention .upcoming h2{
   text-align:center;
+  text-decoration: underline;
 }
 .attention .upcoming{
   display: table-cell;
@@ -77,15 +85,14 @@ section.attention{
 }
 .attention .resources h2{
   text-align:center;
-
+  text-decoration: underline;
 }
 .attention .resources{
   text-align:center;
-
-display: table-cell;
-min-width: 364px;
-
+  display: table-cell;
+  min-width: 364px;
 }
+
 .attention .reminders{
   display: table-cell;
   width:100%;
@@ -94,7 +101,7 @@ min-width: 364px;
 }
 .attention .reminders h2{
   text-align:center;
-
+  text-decoration: underline;
 }
 .attention .reminders p{
 }
@@ -106,11 +113,13 @@ min-width: 364px;
 }
 .recommentations div h2{
   text-align: center;
+  text-decoration: underline;
 }
 .recommentations div{
   display: table-cell;
   padding:0 1em;
 }
+/*About me page*/
 .aboutme{
   display: table;
   background-color: #fff;
@@ -122,8 +131,11 @@ min-width: 364px;
 }
 .aboutme img{
   display: table-cell;
-}
+  float: left;
+  width:100%;
 
+}
+/*Form page*/
 form{
   background-color: #fff;
 }
@@ -134,7 +146,7 @@ form .note{
 form section{
   padding:0 0 5px 5px;
 }
-
+/*Footer*/
 footer {
 	margin-top: 10px;
 	margin-bottom:;
@@ -144,3 +156,167 @@ footer {
 	padding: 1px;
   color:#000;
 	}
+
+.dropbtn{
+  display: none;
+border: none;
+background-color: #d62828;
+}
+.dropbtn div{
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+
+}
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: #d62828;
+  border: 1px solid #000;
+  min-width: 120px;
+  z-index: 1;
+}
+
+.dropdown-content a{
+  color:#fff;
+  padding: 10px 10px 10px;
+  display: block;
+  text-decoration: none;
+
+}
+.show{display: block;}
+
+/*Responsive design*/
+@media screen and (max-width: 1050px){
+body{
+  margin: 0 25px;
+}
+#wrapper{
+  min-width: 100%;
+  border: none;
+}
+header {
+  height:80px;
+  margin: 10px 0px 10px;
+  background:#fff;
+  padding:10px 0;
+  width:100%;
+  display: block;
+  }
+header img{
+  display: table-cell;
+  height: 75%;
+  margin: 15px 15px 20px 0;
+  padding: 0 0 0 10px;
+  float:left;
+  }
+header h1{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 1.5em;
+
+  }
+  nav.menu {
+    display:block;
+    text-align: center;
+    padding: 0 0 0 10px;
+    width:100%;
+    font-size: .7em;
+  }
+  nav.menu li {
+    padding: 0px 20px 0px 0px;
+    float: left;
+    list-style-type:none;
+    }
+nav.menu ul{
+  display: none;
+}
+section.homemain{
+  width:100%;
+  display: block;
+  background-color: #d62828;
+  box-shadow: none;
+  }
+  video{
+    padding:0;
+    width: 100%;
+  }
+  div.announcements{
+    display: block;
+    padding:0 10px 0 20px;
+    vertical-align: middle;
+    background-color: #fff;
+  }
+section.attention{
+    display: block;
+    background-color: #fff;
+    padding: 0 10px 10px 0;
+  }
+  .attention .upcoming{
+    min-width: 0px;
+    width:100%;
+    display: block;
+    text-align: center;
+  }
+    .attention .upcoming h2{
+      text-align:center;
+    }
+  .attention .resources{
+    min-width: 0px;
+    text-align:center;
+    display: block;
+  }
+  .attention .resources h2{
+    text-align:center;
+  }
+  .attention .reminders{
+    min-width: 0px;
+    display: block;
+  }
+  .attention .reminders h2{
+    text-align:center;
+  }
+  .attention .reminders p{
+    padding: 0 0 0 10px;
+  }
+  .recommentations{
+    display: block;
+    border-top: 1px solid white;
+    margin-top: 5px;
+    background-color: #fff;
+  }
+  .recommentations div h2{
+    text-align: center;
+  }
+  .recommentations div{
+    display: block;
+    padding:0 1em;
+  }
+  .aboutme{
+    display: table;
+    background-color: #fff;
+  }
+  .aboutme div{
+    padding: 0 0 0 5px;
+    display: block;
+    vertical-align:top;
+  }
+  .aboutme img{
+    display: block;
+    float: left;
+    width:30%;
+    padding:5px;
+  }
+footer{
+  width:100%;
+}
+.dropbtn{
+  display: block;
+}
