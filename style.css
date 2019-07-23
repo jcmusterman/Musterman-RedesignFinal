@@ -224,7 +224,7 @@ body{
   margin: 0 25px;
 }
 #wrapper{
-  min-width: 100%;
+  min-width: 80%;
   border: none;
 }
 header {
